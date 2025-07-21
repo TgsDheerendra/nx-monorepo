@@ -1,7 +1,7 @@
 {
-  "name": "open-api",
+  "name": "public-api",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "open-api/src",
+  "sourceRoot": "public-api/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -23,15 +23,15 @@
       "defaultConfiguration": "development",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "open-api:build",
+        "buildTarget": "public-api:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "open-api:build:development"
+          "buildTarget": "public-api:build:development"
         },
         "production": {
-          "buildTarget": "open-api:build:production"
+          "buildTarget": "public-api:build:production"
         }
       }
     },

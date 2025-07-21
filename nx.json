@@ -37,7 +37,14 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["open-api-e2e/**/*", "external-api-e2e/**/*"]
+      "exclude": ["public-api-e2e/**/*", "external-api-e2e/**/*"]
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }

@@ -1,17 +1,17 @@
 {
-  "name": "open-api-e2e",
+  "name": "public-api-e2e",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "implicitDependencies": ["open-api"],
+  "implicitDependencies": ["public-api"],
   "targets": {
     "e2e": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
       "options": {
-        "jestConfig": "open-api-e2e/jest.config.ts",
+        "jestConfig": "public-api-e2e/jest.config.ts",
         "passWithNoTests": true
       },
-      "dependsOn": ["open-api:build", "open-api:serve"]
+      "dependsOn": ["public-api:build", "public-api:serve"]
     }
   }
 }
