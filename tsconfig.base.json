@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-monorepo/shared/*": ["packages/src/*"],
-      "@nx-monorepo/config/*": ["packages/config/*"]
+      "@nx-monorepo/config/*": ["packages/config/*"],
+      "@nx-monorepo/shared/*": ["packages/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

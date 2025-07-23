@@ -1,0 +1,10 @@
+node_modules
+dist
+tmp
+.git
+.gitignore
+nx.json
+project.json
+README.md
+*.log
+coverage

@@ -20,10 +20,10 @@ async function bootstrap() {
   );
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  const port = process.env.PORT || 3002;
+  const port = process.env.PORT || 3001;
   setupSwagger(app);
   const orm = app.get(MikroORM);
-  await orm.getSchemaGenerator().updateSchema(); // 👈 adds tables based on entity
+  await orm.getSchemaGenerator().updateSchema(); 
   await app.listen(port);
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
