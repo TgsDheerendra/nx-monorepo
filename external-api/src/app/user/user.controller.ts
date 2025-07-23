@@ -6,7 +6,7 @@ import {
   RoleForbiddenException,
   UserNotFoundException,
   getUserFromAuthHeader
-} from '@nx-monorepo/package-user';
+} from '@nx-monorepo/shared/index';
 
 @Controller('users')
 export class UserController {

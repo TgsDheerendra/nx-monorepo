@@ -5,7 +5,7 @@ import { UserNotFoundException } from './user.exception';
 @Injectable()
 export class UserService {
   private readonly users = [
-    new UserEntity({ id: '1', name: 'Alice', role: 'Developer' }),
+    new UserEntity({ id: '1', name: 'Alice', role: 'admin' }),
     new UserEntity({ id: '2', name: 'Bob', role: 'admin' }),
   ];
 

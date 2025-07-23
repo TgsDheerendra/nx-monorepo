@@ -2,9 +2,8 @@ import { Controller, Get, Param, Post, Body } from '@nestjs/common';
 import {
   UserService,
   CreateUserDto,
-  formatUser,
-  UserEntity,
-} from '@nx-monorepo/package-user';
+  formatUser
+} from '@nx-monorepo/shared/index';
 
 @Controller('users')
 export class UserController {

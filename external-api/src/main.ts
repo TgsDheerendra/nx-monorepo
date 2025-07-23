@@ -11,6 +11,7 @@ import {
 import { AppModule } from './app/app.module';
 import { Logger } from '@nestjs/common';
 import { setupSwagger } from './swagger';
+import { MikroORM } from '@mikro-orm/core';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -21,6 +22,8 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix);
   const port = process.env.PORT || 3002;
   setupSwagger(app);
+  const orm = app.get(MikroORM);
+  await orm.getSchemaGenerator().updateSchema(); // 👈 adds tables based on entity
   await app.listen(port);
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
